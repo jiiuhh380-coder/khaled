@@ -583,6 +583,14 @@ function doLogout() {
     location.reload();
 }
 
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.getElementById('sb-overlay');
+
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+}
+
 // ============================================
 // التنقل
 // ============================================
