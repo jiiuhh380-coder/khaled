@@ -214,6 +214,7 @@ body {
     right: 0;
     height: 100vh;
     z-index: 100;
+    overflow-y: auto;
 }
 
 .sb-logo {
@@ -715,10 +716,11 @@ tr:hover td {
 /* استجابة للشاشات الصغيرة */
 @media(max-width: 768px) {
     .sidebar {
-        width: 100%;
+        width: 280px;
         display: flex;
         transform: translateX(100%);
         transition: transform 0.3s ease;
+        max-width: 85vw;
     }
     .sidebar.active {
         transform: translateX(0);
@@ -726,6 +728,7 @@ tr:hover td {
     .main {
         margin-right: 0;
         padding: 14px;
+        width: 100%;
     }
     .pos-g {
         grid-template-columns: 1fr;
@@ -748,5 +751,8 @@ tr:hover td {
     }
     .sb-overlay.active {
         display: block;
+    }
+    #app {
+        overflow-x: hidden;
     }
 }
